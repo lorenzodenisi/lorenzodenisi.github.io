@@ -132,6 +132,28 @@ body {
 .hero-content {
     max-width: 800px;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    margin-bottom: 2rem;
+}
+
+.profile-picture img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.profile-picture img:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .hero h1 {
@@ -192,6 +214,22 @@ body {
 .btn-secondary:hover {
     background: white;
     color: var(--primary-color);
+}
+
+.btn-download {
+    background: rgba(251, 191, 36, 0.9);
+    color: var(--text-dark);
+    border: 2px solid rgba(251, 191, 36, 0.9);
+}
+
+.btn-download:hover {
+    background: #fbbf24;
+    border-color: #fbbf24;
+    transform: translateY(-2px);
+}
+
+.btn-download i {
+    margin-right: 0.5rem;
 }
 
 .scroll-indicator {
@@ -652,6 +690,11 @@ footer {
         left: 0;
     }
 
+    .profile-picture img {
+        width: 150px;
+        height: 150px;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -688,6 +731,11 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .profile-picture img {
+        width: 120px;
+        height: 120px;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
